@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+          >
+
+
+    <TextView
+        android:id="@+id/tv_animationPerformance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="220dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:text="看我，我是动画"
+        android:textColor="#ff0000"
+        android:textSize="35dp"/>
+
+
+    <Button
+        android:id="@+id/btn_startAnimation"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:text="开始动画"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btn_cancelAnimation"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:text="取消动画"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

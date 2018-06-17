@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:text="开始动画"
+        android:id="@+id/btn_startTweenAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="取消动画"
+        android:id="@+id/btn_cancelTweenAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:textColor="#ff0000"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:text="看我，我是动画"
+        android:textSize="35dp"
+        android:id="@+id/tv_animationPerformance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>
