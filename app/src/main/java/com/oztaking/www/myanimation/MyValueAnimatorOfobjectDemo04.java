@@ -15,7 +15,7 @@ import android.widget.TextView;
  * 实现一个textView动态切换显示：a-z,速度不断的变快；
  */
 
-public class MyValueAnimatorOfObjectDemo04 extends Activity implements View.OnClickListener{
+public class MyValueAnimatorOfobjectDemo04 extends Activity implements View.OnClickListener{
 
     private TextView mTvPerformance;
     private Button mBtnStart;

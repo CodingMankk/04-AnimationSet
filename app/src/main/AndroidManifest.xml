@@ -5,6 +5,8 @@
     <!--<activity android:name=".MyAnimationCodeImpl01">-->
     <!--<activity android:name=".MyValueAnimatorDemo03">-->
     <!--<activity android:name=".MyValueAnimatorOfObjectDemo04">-->
+    <!--<activity android:name=".myponitcustomclassobject.MyValueAnimatorOfobjectCustomClassDemo05">-->
+    <!--<activity android:name=".MyObjectAnimatorMultiDemo06">-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".myponitcustomclassobject.MyValueAnimatorOfobjectCustomClassDemo05">
+        <activity android:name=".mycustomobjectanimation.MyCustomObjectAnimation07">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

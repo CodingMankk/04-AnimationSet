@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oztaking.www.myanimation.MainActivity">
+
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_alpha"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="alpha"/>
+
+        <Button
+            android:id="@+id/btn_translateX"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="transX"/>
+
+        <Button
+            android:id="@+id/btn_translateY"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="transY"/>
+
+
+        <Button
+            android:id="@+id/btn_scaleX"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="scaleX"/>
+
+        <Button
+            android:id="@+id/btn_scaleY"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="scaleY"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_rote"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="rote"/>
+
+        <Button
+            android:id="@+id/btn_roteX"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="roteX"/>
+
+        <Button
+            android:id="@+id/btn_roteY"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="roteY"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#ff0000"
+        android:layout_marginTop="100dp"
+        android:id="@+id/tv_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:background="#ff00ff"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:id="@+id/iv_performance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"/>
+
+
+
+</LinearLayout>

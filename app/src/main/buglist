@@ -1,0 +1,15 @@
+Information:Gradle tasks [:app:assembleDebug]
+Error:Error converting bytecode to dex:
+Cause: java.lang.RuntimeException: Exception parsing classes
+Error:Error converting bytecode to dex:
+Cause: java.lang.RuntimeException: Exception parsing classes
+Error:Error converting bytecode to dex:
+Cause: java.lang.RuntimeException: Exception parsing classes
+Error:3 errors; aborting
+Error:Execution failed for task ':app:transformClassesWithDexForDebug'.
+> com.android.build.api.transform.TransformException: java.lang.RuntimeException: com.android.ide.common.process.ProcessException: java.util.concurrent.ExecutionException: com.android.ide.common.process.ProcessException: Return code 1 for dex process
+Information:BUILD FAILED
+Information:Total time: 6.411 secs
+Information:5 errors
+Information:0 warnings
+Information:See complete output in console
