@@ -44,7 +44,6 @@ public class MyCustomObjectAnimation07 extends Activity implements View.OnClickL
         mPointRadiusAnimator.setRepeatCount(3);
         mPointRadiusAnimator.setRepeatMode(ValueAnimator.REVERSE);
 
-
     }
 
 
