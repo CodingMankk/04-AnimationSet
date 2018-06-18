@@ -1,6 +1,5 @@
-package com.oztaking.www.myanimation;
+package com.oztaking.www.myanimation.myponitcustomclassobject;
 
-import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -11,11 +10,13 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.oztaking.www.myanimation.R;
+
 /**
  * @function:
  */
 
-public class MyViewCircleMenu extends Activity implements View.OnClickListener {
+public class MyViewLinearMenu09 extends Activity implements View.OnClickListener {
 
     private Button mBtnCircle1;
     private Button mBtnCircle2;
@@ -30,7 +31,7 @@ public class MyViewCircleMenu extends Activity implements View.OnClickListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_myviewcirclemenu_layout);
+        setContentView(R.layout.activity_myviewlinearmenu_layout);
         initView();
     }
 
@@ -56,14 +57,10 @@ public class MyViewCircleMenu extends Activity implements View.OnClickListener {
         if (v.getVisibility() != View.VISIBLE) {
             v.setVisibility(View.VISIBLE);
         }
-        float radius = 300;
 
-        float degree = (float) (Math.toRadians(90) / (total - 1) * index);
-        float transX = -(float) (radius * Math.sin(degree));
-        float transY = -(float) (radius * Math.cos(degree));
+        int lenght = 750;
+        int transY = -(lenght / total -1) * index;
 
-        ObjectAnimator translationXView = ObjectAnimator.ofFloat(v, "translationX", 0,
-                transX);
         ObjectAnimator translationYView = ObjectAnimator.ofFloat(v, "translationY", 0,
                 transY);
         ObjectAnimator scaleXView = ObjectAnimator.ofFloat(v, "scaleX", 0, 1);
@@ -71,82 +68,45 @@ public class MyViewCircleMenu extends Activity implements View.OnClickListener {
         ObjectAnimator alphaView = ObjectAnimator.ofFloat(v, "alpha", 0, 1);
 
         AnimatorSet set = new AnimatorSet();
-        set.play(translationXView)
-                .with(translationYView)
+        set.play(translationYView)
                 .with(scaleXView)
                 .with(scaleYView)
                 .with(alphaView);
 
-        set.setDuration(500);
+        set.setDuration(300);
         set.setInterpolator(new AccelerateInterpolator());
         set.start();
 
-
     }
 
-    private void doCloseAnimator(final View v, int index, int total) {
+    private void doCloseAnimator(View v, int index, int total) {
 
         if (v.getVisibility() != View.VISIBLE) {
             v.setVisibility(View.VISIBLE);
         }
 
-        float radius = 300;
-        //        float degree = (float) (Math.toRadians(90)/(total - 1) * index);
+        int lenght = 750;
+        int transY = -(lenght / total -1) * index;
 
-        float degree = (float) (Math.PI * index / ((total - 1) * 2));
-
-        float transX = -(float) (radius * Math.sin(degree));
-        float transY = -(float) (radius * Math.cos(degree));
-
-        ObjectAnimator translationXView = ObjectAnimator.ofFloat(v, "translationX",
-                transX, 0);
         ObjectAnimator translationYView = ObjectAnimator.ofFloat(v, "translationY",
-                transY, 0);
-//        ObjectAnimator scaleXView = ObjectAnimator.ofFloat(v, "scaleX", 1f, 0f);
-//        ObjectAnimator scaleYView = ObjectAnimator.ofFloat(v, "scaleY", 1f, 0f);
-
-        ObjectAnimator scaleXView = ObjectAnimator.ofFloat(v, "scaleX", 1f, 0.1f);
-        ObjectAnimator scaleYView = ObjectAnimator.ofFloat(v, "scaleY", 1f, 0.1f);
-
-        ObjectAnimator alphaView = ObjectAnimator.ofFloat(v, "alpha", 1f, 0f);
+                transY,0);
+        ObjectAnimator scaleXView = ObjectAnimator.ofFloat(v, "scaleX", 1, 0);
+        ObjectAnimator scaleYView = ObjectAnimator.ofFloat(v, "scaleY",1,0);
+        ObjectAnimator alphaView = ObjectAnimator.ofFloat(v, "alpha", 1,0);
 
         AnimatorSet set = new AnimatorSet();
-        set.playTogether(
-                translationXView,
-                translationYView,
-                scaleXView,
-                scaleYView,
-                alphaView);
+        set.play(translationYView)
+                .with(scaleXView)
+                .with(scaleYView)
+                .with(alphaView);
 
-        set.setDuration(500);
+        set.setDuration(300);
         set.setInterpolator(new AccelerateInterpolator());
         set.start();
 
-        set.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                v.setScaleX(1.0f);
-                v.setScaleY(1.0f);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        });
-
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -155,18 +115,18 @@ public class MyViewCircleMenu extends Activity implements View.OnClickListener {
                 Toast.makeText(getApplicationContext(), "btn_menu", Toast.LENGTH_SHORT).show();
                 if (!isMenuPressed) {
                     isMenuPressed = true;
-                    doStartAnimator(mBtnCircle1, 0, 5);
-                    doStartAnimator(mBtnCircle2, 1, 5);
-                    doStartAnimator(mBtnCircle3, 2, 5);
-                    doStartAnimator(mBtnCircle4, 3, 5);
-                    doStartAnimator(mBtnCircle5, 4, 5);
+                    doStartAnimator(mBtnCircle1, 1, 5);
+                    doStartAnimator(mBtnCircle2, 2, 5);
+                    doStartAnimator(mBtnCircle3, 3, 5);
+                    doStartAnimator(mBtnCircle4, 4, 5);
+                    doStartAnimator(mBtnCircle5, 5, 5);
                 } else {
                     isMenuPressed = false;
-                    doCloseAnimator(mBtnCircle1, 0, 5);
-                    doCloseAnimator(mBtnCircle2, 1, 5);
-                    doCloseAnimator(mBtnCircle3, 2, 5);
-                    doCloseAnimator(mBtnCircle4, 3, 5);
-                    doCloseAnimator(mBtnCircle5, 4, 5);
+                    doCloseAnimator(mBtnCircle1, 1, 5);
+                    doCloseAnimator(mBtnCircle2, 2, 5);
+                    doCloseAnimator(mBtnCircle3, 3, 5);
+                    doCloseAnimator(mBtnCircle4, 4, 5);
+                    doCloseAnimator(mBtnCircle5, 5, 5);
                 }
                 break;
 

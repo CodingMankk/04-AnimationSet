@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MyViewCircleMenu">
+        <activity android:name=".myponitcustomclassobject.MyViewLinearMenu09">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
